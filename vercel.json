@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/server.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "backend/server.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "outputDirectory": "frontend/dist",
+  "framework": "vite"
+}
